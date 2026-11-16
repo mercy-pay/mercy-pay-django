@@ -9,7 +9,7 @@ description = "Mercy Pay pour Django : client configuré par les settings et web
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = ["mercy-pay>=0.1,<1", "django>=4.2"]
 keywords = ["mercy pay", "django", "webhooks", "paiement", "mobile money"]
 classifiers = ["Framework :: Django", "Programming Language :: Python :: 3"]
