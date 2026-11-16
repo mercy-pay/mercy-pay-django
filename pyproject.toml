@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mercy-pay-django"
+version = "0.1.0"
+description = "Mercy Pay pour Django : client configuré par les settings et webhooks signés en signaux."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+dependencies = ["mercy-pay>=0.1,<1", "django>=4.2"]
+keywords = ["mercy pay", "django", "webhooks", "paiement", "mobile money"]
+classifiers = ["Framework :: Django", "Programming Language :: Python :: 3"]
+
+[project.urls]
+Documentation = "https://docs.mercy-pay.com"
+Source = "https://github.com/mercy-pay/mercy-pay-django"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-django>=4.9"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mercypay_django"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+pythonpath = ["src", "."]
